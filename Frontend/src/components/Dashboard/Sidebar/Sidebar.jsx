@@ -6,10 +6,9 @@ import {
   faUser,
   faClipboard,
   faCog,
-  faUserCircle, // Ícono de usuario
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import logoImage from "../../../../public/Logo.png";
-import { Link } from "react-router-dom";
 
 const Sidebar = ({ onItemClick }) => {
   return (
@@ -61,6 +60,19 @@ const Sidebar = ({ onItemClick }) => {
           >
             <FontAwesomeIcon icon={faUser} className="mr-2" />
             Roles
+          </a>
+        </li>
+
+        <hr className="mb-4 border-t border-orange-400" />
+
+        <li className="mb-2 font-semibold text-lg">
+          <a
+            href="#"
+            className="hover:bg-green-700 p-2 rounded block w-full"
+            onClick={() => onItemClick("paginas")}
+          >
+            <FontAwesomeIcon icon={faUser} className="mr-2" />
+            Páginas
           </a>
         </li>
 

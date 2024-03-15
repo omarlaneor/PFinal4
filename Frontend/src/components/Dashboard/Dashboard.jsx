@@ -7,6 +7,7 @@ import Usuarios from "../Usuarios/Usuarios";
 import Roles from "../Roles/Roles";
 import Configuration from "../Configuration/Configuration";
 import Welcome from "../Welcome/Welcome";
+import Paginas from "../Paginas/Paginas";
 
 const Dashboard = () => {
   const [content, setContent] = useState("welcome");
@@ -25,13 +26,14 @@ const Dashboard = () => {
             Gestión de Datos por Usuario
           </h1>
           <h1 className="text-2xl font-bold mb-4">Bienvenido</h1>
-          <hr class="mb-4 w-full border-purple-200 border-2 rounded-full" />
+          <hr className="mb-4 w-full border-purple-200 border-2 rounded-full" />
 
           {content === "welcome" && <Welcome />}
           {content === "bitacoras" && <Bitacoras />}
           {content === "usuarios" && <Usuarios />}
           {content === "roles" && <Roles />}
           {content === "configuration" && <Configuration />}
+          {content === "paginas" && <Paginas />}
         </div>
       </div>
     </div>
